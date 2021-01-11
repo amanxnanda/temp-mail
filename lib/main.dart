@@ -28,17 +28,44 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    double _height = MediaQuery.of(context).size.height;
+    double _width = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 254, 206, 47),
+        title: Row(
+          children: [
+            Text(
+              "TEMP",
+              style: TextStyle(
+                color: Color.fromARGB(255, 26, 26, 26),
+                letterSpacing: _width * 0.02,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            Text(
+              'MAIL',
+              style: TextStyle(
+                letterSpacing: _width * 0.02,
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontWeight: FontWeight.w900,
+              ),
+            )
+          ],
+        ),
+      ),
       body: Container(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            
-            radius: 1.5,
-            colors: [
-              Color.fromARGB(255, 22, 135, 237),
-              
-              Color.fromARGB(255, 20, 55, 90)
+        color: Color.fromARGB(255, 255, 255, 255),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                'Assets/hitting_mail.png',
+                filterQuality: FilterQuality.high,
+                fit: BoxFit.scaleDown,
+              ),
             ],
           ),
         ),
