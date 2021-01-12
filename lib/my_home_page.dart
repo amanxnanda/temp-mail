@@ -115,6 +115,18 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               margin: EdgeInsets.all(_width * 0.05),
               decoration: kBoxDecoration,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Inbox',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

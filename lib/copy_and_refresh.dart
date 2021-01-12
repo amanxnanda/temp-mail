@@ -33,6 +33,7 @@ class CopyAndRefresh extends StatelessWidget {
           Text(
             text,
             textAlign: TextAlign.center,
+             style: Theme.of(context).textTheme.headline6.copyWith(fontSize: _width*0.05),
           ),
         ],
       ),
