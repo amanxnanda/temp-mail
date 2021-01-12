@@ -1,8 +1,8 @@
-import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'constant.dart';
 import 'copy_and_refresh.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -61,20 +61,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(_width * 0.03)),
               margin: EdgeInsets.all(_width * 0.05),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Padding(
-                  //   padding: const EdgeInsets.fromLTRB(8, 8, 15, 8),
-                  //   child: Icon(
-                  //     Icons.mail,
-                  //     color: kYellowColor,
-                  //   ),
-                  // ),
-                  BorderedText(
-                    strokeWidth: 1,
-                    child: Text(
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 15, 8),
+                    child: Icon(
+                      Icons.mail,
+                      color: kYellowColor,
+                    ),
+                  ),
+                  Expanded(
+                    child: AutoSizeText(
                       'amannanda8@gmail.com',
+                      maxLines: 1,
                       style: TextStyle(
                         color: kYellowColor,
                         fontSize: _width * 0.07,
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
             flex: 1,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
                   child: CopyAndRefresh(
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 6,
             child: Container(
               margin: EdgeInsets.all(_width * 0.05),
               decoration: kBoxDecoration,

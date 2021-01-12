@@ -22,7 +22,7 @@ class CopyAndRefresh extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      
-      margin: EdgeInsets.all(_width * 0.025),
+      margin: EdgeInsets.symmetric(horizontal:_width * 0.05),
       decoration: kBoxDecoration.copyWith(),
       child: Row(
         children: [
