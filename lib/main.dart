@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'my_home_page.dart';
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Temp Mail',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -20,4 +19,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

@@ -14,6 +14,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     double _height = MediaQuery.of(context).size.height;
     double _width = MediaQuery.of(context).size.width;
 
@@ -116,7 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: EdgeInsets.all(_width * 0.05),
               decoration: kBoxDecoration,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -125,6 +127,65 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
+
+                  Container(
+                    margin: EdgeInsets.all(_width * 0.02),
+                    decoration: kBoxDecoration,
+                    height: 100.0,
+                    child: Row(
+                      //crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: CircleAvatar(
+                            backgroundColor: Color.fromARGB(255, 34, 51, 67),
+                            child: Text(
+                              'GE',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline6
+                                  .copyWith(color: kWhiteColor),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'geekypanda360',
+                                style: Theme.of(context).textTheme.headline6,
+                              ),
+                              Text('geekypanda360@gmail.comj'),
+                              Text('Subject'),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Text('12 Jan'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // ListView.builder(
+                  //   itemBuilder: (BuildContext context, int index) {
+                  //     return Card(
+                  //       child: Row(
+
+                  //         crossAxisAlignment: CrossAxisAlignment.stretch,
+                  //         children: [
+                  //           CircleAvatar(
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
                 ],
               ),
             ),

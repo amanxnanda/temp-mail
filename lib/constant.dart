@@ -6,7 +6,7 @@ BoxDecoration kBoxDecoration = BoxDecoration(
   color: Colors.transparent,
   borderRadius: BorderRadius.circular(10.0),
   border: Border.all(
-    width: 0.6,
+    width: 0.2,
     color: Colors.black,
   ),
 );
