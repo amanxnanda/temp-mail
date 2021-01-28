@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Expanded(
                           //TODO: this should be 4
-                          flex: 2,
+                          flex: 4,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
